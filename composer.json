@@ -1,0 +1,70 @@
+{
+  "name": "solaroberto/datatable-services",
+  "description": "A comprehensive package for managing DataTables in Laravel applications with advanced filtering and bulk operations support",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Roberto Sola",
+      "email": "info@robertosola.com",
+      "role": "Developer"
+    }
+  ],
+  "keywords": [
+    "laravel",
+    "datatable",
+    "datatables",
+    "yajra",
+    "filter",
+    "bulk-actions",
+    "search-builder"
+  ],
+  "require": {
+    "php": "^8.0",
+    "illuminate/support": "^9.0|^10.0|^11.0",
+    "illuminate/database": "^9.0|^10.0|^11.0",
+    "yajra/laravel-datatables-oracle": "^10.0|^11.0",
+    "yajra/laravel-datatables-html": "^10.0|^11.0",
+    "yajra/laravel-datatables-buttons": "^10.0|^11.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0|^10.0",
+    "orchestra/testbench": "^7.0|^8.0|^9.0",
+    "mockery/mockery": "^1.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "RobSol66\\DataTableServices\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "RobSol66\\DataTableServices\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "RobSol66\\DataTableServices\\Providers\\DataTableServicesProvider"
+      ],
+      "aliases": {
+        "DataTableService": "RobSol66\\DataTableServices\\Facades\\DataTableService",
+        "FilterService": "RobSol66\\DataTableServices\\Facades\\FilterService"
+      }
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "support": {
+    "issues": "https://github.com/solaroberto/datatable-services/issues",
+    "source": "https://github.com/solaroberto/datatable-services"
+  }
+}
